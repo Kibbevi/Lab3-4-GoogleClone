@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
- 
+
 import { TabsPage } from './tabs.page';
- 
+
 const routes: Routes = [
   {
     path: '',
@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: 'mail',
-        loadChildren: () => import('../mail/mail.module').then(m => m.MailPageModule)
+        loadChildren: () => import('../mail/mail.module').then( m => m.MailPageModule)
       },
       {
         path: 'mail/:id',
@@ -18,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'meet',
-        loadChildren: () => import('../meet/meet.module').then(m => m.MeetPageModule)
+        loadChildren: () => import('../meet/meet.module').then( m => m.MeetPageModule)
       },
       {
         path: '',
@@ -28,9 +28,9 @@ const routes: Routes = [
     ]
   }
 ];
- 
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TabsPageRoutingModule { }
+export class TabsPageRoutingModule {}
