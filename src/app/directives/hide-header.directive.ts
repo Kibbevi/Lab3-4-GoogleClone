@@ -55,5 +55,5 @@ export class HideHeaderDirective {
       this.previousY = scrollTop;
     }
  
-  }.
+  }
 }
